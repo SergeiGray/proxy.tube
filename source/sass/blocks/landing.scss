@@ -1,0 +1,17 @@
+.landing {
+  display: flex;
+  width: 100%;
+  min-height: 1035px;
+  margin-top: -70px;
+  padding-top: 160px;
+  background-image: url(../img/bg_landing_desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  .wrapper {
+    display: flex;
+    background-image: url(../img/bg_landing-wrapper_desktop.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+  }
+}
