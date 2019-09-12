@@ -24,25 +24,6 @@
   var hangFlexslider = function () {
     $(document).ready(function() {
 
-      $('.feedback__slider').flexslider({
-        selector: ".feedback__slider_container > li",
-        animation: "slider",
-        slidershow: false,
-        smoothHeight: true,
-        keyboard: true,
-        prevText: "",
-        nextText: "",
-        itemWidth: 1160,
-        itemMargin: 40,
-        minItems: 1,
-        maxItems: 1,
-        controlNav: false,
-        touch: true,
-        move: 1
-      });
-
-
-
       if($(window).width() > 1190) {
         $('.landing__slider').flexslider({
           selector: ".landing__slider_container > li",
@@ -60,6 +41,7 @@
           touch: true,
           move: 1
         });
+
         $('.news__slider').flexslider({
           selector: ".news__slider_container > li",
           animation: "slider",
@@ -73,6 +55,23 @@
           minItems: 1,
           maxItems: 2,
           controlNav: true,
+          touch: true,
+          move: 1
+        });
+
+        $('.feedback__slider').flexslider({
+          selector: ".feedback__slider_container > li.feedback__desktop",
+          animation: "slider",
+          slidershow: false,
+          smoothHeight: true,
+          keyboard: true,
+          prevText: "",
+          nextText: "",
+          itemWidth: 1160,
+          itemMargin: 40,
+          minItems: 1,
+          maxItems: 1,
+          controlNav: false,
           touch: true,
           move: 1
         });
@@ -112,6 +111,7 @@
           touch: true,
           move: 1
         });
+
         $('.news__slider').flexslider({
           selector: ".news__slider_container > li",
           animation: "slider",
@@ -125,6 +125,23 @@
           minItems: 1,
           maxItems: 1,
           controlNav: true,
+          touch: true,
+          move: 1
+        });
+
+        $('.feedback__slider').flexslider({
+          selector: ".feedback__slider_container > li.feedback__tablet",
+          animation: "slider",
+          slidershow: false,
+          smoothHeight: true,
+          keyboard: true,
+          prevText: "",
+          nextText: "",
+          itemWidth: 720,
+          itemMargin: 40,
+          minItems: 1,
+          maxItems: 1,
+          controlNav: false,
           touch: true,
           move: 1
         });
