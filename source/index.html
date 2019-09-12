@@ -19,15 +19,28 @@
       </span>
     </a>
     <div class="header__lang">
-      <span>ru</span>
+      <a href="index.html"  class="header__lang_link">
+        <svg class="header__lang_icon" width="21" height="14">
+          <use xlink:href="img/sprite.svg#icon-flag-russia"></use>
+        </svg>
+        <span>Ru</span>
+        <span class="header__lang_arrow"></span>
+      </a>
+      <a href="index.html"  class="header__lang_link display_none">
+        <svg class="header__lang_icon" width="21" height="14">
+          <use xlink:href="img/sprite.svg#icon-flag-united-kingdom"></use>
+        </svg>
+        <span>En</span>
+      </a>
     </div>
     <div class="header__login">
       <a href="" class="header__login_link">
         <span class="header__login_icon"></span>
-        <span class="header__login_text">Войти в кабинет</span>
+        <span class="header__login_text desktop">Войти в кабинет</span>
+        <span class="header__login_text table">Авторизация</span>
       </a>
       <form class="header__login_reg">
-        <input class="input" type="email" placeholder="E-mail">
+        <input type="email" class="input" placeholder="E-mail">
         <button class="submit">Регистрация</button>
       </form>
     </div>
@@ -35,13 +48,73 @@
   <main>
     <section class="landing">
       <div class="wrapper">
+        <div class="landing__bg"></div>
         <h1 class="title">Персональные прокси для ваших задач</h1>
         <p class="subtitle">Выберите цель использования</p>
-        <div>БЛОК СЕРВИСОВ</div>
-        <p class="subtitle">Или укажите сервис, для которого нужны прокси</p>
-        <form>
-          <input type="text" class="input" placeholder="example.ru">
-          <button class="submit">Найти</button>
+        <form class="landing__form">
+          <div class="landing__slider">
+            <ul class="landing__slider_container">
+              <li class="landing__slider_item">
+                <input id="landing__slider_item_1" type="radio" name="landing__slider_item" class="landing__slider_input">
+                <label for="landing__slider_item_1" class="landing__slider_label">
+                  <svg class="landing__slider_icon" width="61" height="26">
+                    <use xlink:href="img/sprite.svg#icon-yandex"></use>
+                  </svg>
+                  <p>парсинг</p>
+                </label>
+              </li>
+              <li class="landing__slider_item">
+                <input id="landing__slider_item_2" type="radio" name="landing__slider_item" class="landing__slider_input">
+                <label for="landing__slider_item_2" class="landing__slider_label">
+                  <svg class="landing__slider_icon" width="25" height="24">
+                    <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  </svg>
+                  <p>создание аккаунтов</p>
+                </label>
+              </li>
+              <li class="landing__slider_item">
+                <input id="landing__slider_item_3" type="radio" name="landing__slider_item" class="landing__slider_input">
+                <label for="landing__slider_item_3" class="landing__slider_label">
+                  <svg class="landing__slider_icon" width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                  </svg>
+                  <p>рассылка</p>
+                </label>
+              </li>
+              <li class="landing__slider_item">
+                <input id="landing__slider_item_4" type="radio" name="landing__slider_item" class="landing__slider_input">
+                <label for="landing__slider_item_4" class="landing__slider_label">
+                  <svg class="landing__slider_icon" width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icon-question"></use>
+                  </svg>
+                  <p>??????????</p>
+                </label>
+              </li>
+              <li class="landing__slider_item">
+                <input id="landing__slider_item_5" type="radio" name="landing__slider_item" class="landing__slider_input">
+                <label for="landing__slider_item_5" class="landing__slider_label">
+                  <svg class="landing__slider_icon" width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icon-question"></use>
+                  </svg>
+                  <p>??????????</</p>
+                </label>
+              </li>
+              <li class="landing__slider_item">
+                <input id="landing__slider_item_6" type="radio" name="landing__slider_item" class="landing__slider_input">
+                <label for="landing__slider_item_6" class="landing__slider_label">
+                  <svg class="landing__slider_icon" width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icon-question"></use>
+                  </svg>
+                  <p>??????????</</p>
+                </label>
+              </li>
+            </ul>
+          </div>
+          <p class="subtitle">Или укажите сервис, для которого нужны прокси</p>
+          <div>
+            <input type="text" class="input" placeholder="example.ru">
+            <button class="submit">Найти</button>
+          </div>
         </form>
       </div>
     </section>
@@ -49,58 +122,104 @@
       <div class="wrapper">
         <ul class="benefits__listing">
           <li class="benefits__listing_item">
-            <div>
-              <div class="benefits__listing_icon"></div>
+            <div class="row">
+              <div class="benefits__listing_container">
+                <span class="benefits__listing_icon"></span>
+                <span class="benefits__listing_shadow"></span>
+              </div>
               <div class="benefits__listing_line"></div>
             </div>
             <p class="text">Элитные прокси HTTPS и SOCKS</p>
           </li>
           <li class="benefits__listing_item">
-            <div>
-              <div class="benefits__listing_icon"></div>
+            <div class="row">
+              <div class="benefits__listing_container">
+                <span class="benefits__listing_icon"></span>
+                <span class="benefits__listing_shadow"></span>
+              </div>
               <div class="benefits__listing_line"></div>
             </div>
             <p class="text">Более 275 000 IP-адресов</p>
           </li>
           <li class="benefits__listing_item">
-            <div>
-              <div class="benefits__listing_icon"></div>
+            <div class="row">
+              <div class="benefits__listing_container">
+                <span class="benefits__listing_icon"></span>
+                <span class="benefits__listing_shadow"></span>
+              </div>
               <div class="benefits__listing_line"></div>
             </div>
             <p class="text">Покупка от 1 прокси</p>
           </li>
           <li class="benefits__listing_item">
-            <div>
-              <div class="benefits__listing_icon"></div>
+            <div class="row">
+              <div class="benefits__listing_container">
+                <span class="benefits__listing_icon"></span>
+                <span class="benefits__listing_shadow"></span>
+              </div>
               <div class="benefits__listing_line"></div>
             </div>
             <p class="text">Автоматическая выдача заказа</p>
           </li>
           <li class="benefits__listing_item">
-            <div>
-              <div class="benefits__listing_icon"></div>
-              <div class="benefits__listing_line"></div>
+            <div class="row">
+              <div class="benefits__listing_container">
+                <span class="benefits__listing_icon"></span>
+                <span class="benefits__listing_shadow"></span>
+              </div>
             </div>
             <p class="text">API для разрабочиков</p>
           </li>
         </ul>
         <h2 class="title">Более 23 стран в наличии!</h2>
-        <p class="text">Огромный выбор анонимных провайдеров</p>
+        <p class="text benefits__buy_subtitle">Огромный выбор анонимных провайдеров</p>
         <div class="benefits__buy">
-          <form>
-            <select name="" id=""></select>
-            <select name="" id=""></select>
-            <select name="" id=""></select>
-            <input type="number" placeholder="1шт.">
-            <input type="text" placeholder="Промокод">
+          <div class="benefits__buy_bg"></div>
+          <form class="benefits__buy_form">
+            <label>
+              <select class="select_unit first_select_unit">
+                 <option value="Россия">Россия</option>
+                 <option value="Германия">Германия</option>
+                 <option value="США">США</option>
+                 <option value="Франция">Франция</option>
+                 <option value="Австралия">Австралия</option>
+                 <option value="Сингапур">Сингапур</option>
+                 <option value="Великобритания">Великобритания</option>
+                 <option value="Украина">Украина</option>
+                 <option value="Япония">Япония</option>
+                 <option value="Нидерланды">Нидерланды</option>
+              </select>
+            </label>
+            <label>
+              <select class="select_unit">
+                <option value="IPv6" selected="">IPv6</option>
+                <option value="IPv4">IPv4</option>
+                <option value="Shared IPv4">Shared IPv4</option>
+              </select>
+            </label>
+            <label>
+              <select class="select_unit">
+                <option value="3 дня">3 дня</option>
+                <option value="7 дней">7 дней</option>
+                <option value="2 недели">2 недели</option>
+                <option value="1 месяц">1 месяц</option>
+                <option value="2 месяца">2 месяца</option>
+                <option value="3 месяца">3 месяца</option>
+                <option value="6 месяцев">6 месяцев</option>
+                <option value="1 год">1 год</option>
+              </select>
+            </label>
+            <input type="number" placeholder="1шт." class="benefits__buy_input">
+            <input type="text" placeholder="Промокод" class="benefits__buy_input">
             <div class="benefits__price">
               <span>6,5 руб.</span>
               <span>6,5 руб./шт.</span>
             </div>
-            <button class="submit" type="submit">Купить</button>
-            <label>
-              <input type="checkbox">
-              <span>Даю согласие на обработку данных солгасно <a href="">политике</a></span>
+            <p class="benefits__discount">возьмите ещё 4 и получите -5%</p>
+            <button class="submit submit_shadow" type="submit">Купить</button>
+            <input id="benefits__consent_input" type="checkbox" class="checkbox_input">
+            <label for="benefits__consent_input" class="benefits__consent checkbox_label">
+              Даю согласие на обработку данных солгасно <a href="">политике</a>
             </label>
           </form>
         </div>
@@ -118,61 +237,266 @@
         <div class="benefits__usability">
           <div class="row">
             <div class="col">
-              <h2>Удобный личный кабинет</h2>
+              <h2 class="title">Удобный личный кабинет</h2>
               <p class="text">создано людьми и для людей</p>
             </div>
             <div class="col">
-              <button class="submit">Зарегистрироваться</button>
+              <button class="submit submit_shadow">Зарегистрироваться</button>
             </div>
           </div>
           <div class="row">
             <div class="col">
               <ul class="benefits__usability_list">
-                <li>
+                <li class="benefits__usability_item active">
                   <p class="subtitle">Управление списками</p>
-                  <p class="text">Вы всегда видите группы, в которых были куплены прокси. Их можно объединять, переименовывать и отображать в удобном для работы виде.</p>
+                  <p class="text">Вы всегда видите группы, в которых были куплены прокси. Их можно объединять, переименовывать  и отображать в удобном для работы виде.</p>
                 </li>
-                <li>
+                <li class="benefits__usability_item">
                   <p class="subtitle">Привязка к IP</p>
-                  <p class="text">Авторизацию можно использовать как по логину/паролю, так и посредством привязки к статическому IP-адресу вашего устройства.</p>
+                  <p class="text">Авторизацию можно использовать как  по логину/паролю, так и посредством привязки  к статическому IP-адресу вашего устройства.</p>
                 </li>
-                <li>
+                <li class="benefits__usability_item">
                   <p class="subtitle">Продление прокси</p>
                   <p class="text">Все купленные прокси можно продлевать, а так же подключить функцию "автопродление", котрая будет помнить о продлении за вас.</p>
                 </li>
               </ul>
             </div>
-            <div class="col"></div>
+            <div class="col benefits__usability_img benefits__usability_img_first">
+            </div>
           </div>
         </div>
       </div>
     </section>
     <section class="news">
-      <h2 class="title">Только полезные новости</h2>
-      <div class="news__slider">
-        <ul class="news__slider_container">
-          <li class="news__slider_item">
-            <img src="" alt="">
-            <div class="content"></div>
-          </li>
-          <li class="news__slider_item"></li>
-          <li class="news__slider_item"></li>
-          <li class="news__slider_item"></li>
-          <li class="news__slider_item"></li>
-          <li class="news__slider_item"></li>
-        </ul>
+      <div class="wrapper">
+        <h2 class="title">Только полезные новости</h2>
+        <div class="news__slider">
+          <ul class="news__slider_container">
+            <li class="news__slider_item">
+              <img src="img/news/distinction_ipv4_ipv6.jpg" alt="Отличие IPv4 от IPv6">
+              <div class="content">
+                <p class="subtitle">Отличие IPv4 от IPv6</p>
+                <span class="news__slider_line"></span>
+                <p class="text">Какой протокол будет надежнее для работы с социальными сетями и стоит ли выбрать IPv4 прокси прямо сейчас - ищем ответы...</p>
+                <div class="news__slider_footer">
+                  <span class="news__slider_date">20.07.2019</span>
+                  <span class="news__slider_rubric">Полезное</span>
+                </div>
+              </div>
+            </li>
+            <li class="news__slider_item">
+              <img src="img/news/tune_chrome.jpg" alt="Отличие IPv4 от IPv6">
+              <div class="content">
+                <p class="subtitle">Как настроить прокси в Chrome</p>
+                <span class="news__slider_line"></span>
+                <p class="text">Многие пользователи, которые хотят добиться анонимности, задаются вопросом как настроить прокси сервер в Google...</p>
+                <div class="news__slider_footer">
+                  <span class="news__slider_date">20.07.2019</span>
+                  <span class="news__slider_rubric">Ликбез</span>
+                </div>
+              </div>
+            </li>
+            <li class="news__slider_item">
+              <img src="img/news/question.png" alt="?">
+              <div class="content">
+                <p class="subtitle">Текст</p>
+                <span class="news__slider_line"></span>
+                <p class="text">Текст</p>
+                <div class="news__slider_footer">
+                  <span class="news__slider_date">20.07.2019</span>
+                  <span class="news__slider_rubric">Ликбез</span>
+                </div>
+              </div>
+            </li>
+            <li class="news__slider_item">
+              <img src="img/news/question.png" alt="?">
+              <div class="content">
+                <p class="subtitle">Текст</p>
+                <span class="news__slider_line"></span>
+                <p class="text">Текст</p>
+                <div class="news__slider_footer">
+                  <span class="news__slider_date">20.07.2019</span>
+                  <span class="news__slider_rubric">Ликбез</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <form class="news__newsletter">
+          <p class="text">Подпишись на нашу рассылку. Обещаем не спамить :)</p>
+          <input type="email" class="input" placeholder="E-mail">
+          <button class="submit" type="submit">Подписаться</button>
+        </form>
       </div>
-      <form class="news__newsletter">
-        <p class="text">Подпишись на нашу рассылку. Обещаем не спамить :)</p>
-        <input type="email" class="input">
-        <button class="submit" type="submit">Подписаться</button>
-      </form>
     </section>
     <section class="feedback">
-
+      <h2 class="title">Отзывы наших клиентов</h2>
+      <div class="feedback__slider">
+        <ul class="feedback__slider_container">
+          <li class="feedback__slider_item">
+            <div class="feedback__desktop">
+              <div class="col">
+                <div class="feedback__message feedback__message_first">
+                  <div class="feedback__header">
+                    <img src="img/feedback/avatar.png" alt="Аватар" width="69" height="69" class="feedback__avatar">
+                    <div>
+                      <p class="feedback__name">Mr_Cash07</p>
+                      <p class="feedback__date">12.06.2019</p>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">Лучший сервис для моих целей. Уже и пару друзей перетащил на proxy tybe :)</p>
+                    <p class="text">Очень оперативная поддержка — и это сильно радует. В прошлый раз думал, что все прокси упали, а нет, выяснили с менеджером, что проблема со стороны провайдера.</p>
+                    <p class="text">Спасибо вам ребята!!!!!!!!!!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="feedback__message feedback__second_message">
+                  <div class="feedback__header">
+                    <img src="img/feedback/avatar.png" alt="Аватар" width="69" height="69" class="feedback__avatar">
+                    <div>
+                      <p class="feedback__name">Zombi-land</p>
+                      <p class="feedback__date">01.07.2019</p>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">Была уверена, что ничего лучше прежнего сервиса не найду. Но попробовала этот и осталась довольна. Мне нравится отношение, а цены везде примерно одинаковые.</p>
+                    <p class="text">А там думайте сами конечно )</p>
+                  </div>
+                </div>
+                <div class="feedback__message feedback__third_message">
+                  <div class="feedback__header">
+                    <img src="img/feedback/avatar.png" alt="Аватар" width="69" height="69" class="feedback__avatar">
+                    <div>
+                      <p class="feedback__name">Timberlake</p>
+                      <p class="feedback__date">01.07.2019</p>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">Пользуюсь прокси от этого сервиса только первый месяц, полёт нормальный. Кабинет нравится, удобно. Ну и дизайн приятный, глазу приятно =)</p>
+                    <p class="text">Реферальная система заработка радует, можно экономить.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="feedback__slider_item">
+            <div class="feedback__desktop">
+              <div class="col">
+                <div class="feedback__message feedback__message_first">
+                  <div class="feedback__header">
+                    <img src="img/feedback/avatar.png" alt="Аватар" width="69" height="69" class="feedback__avatar">
+                    <div>
+                      <p class="feedback__name">?????</p>
+                      <p class="feedback__date">?????</p>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">???????? ?????  ????????</p>
+                    <p class="text">Очень оперативная поддержка — и это сильно радует. В прошлый раз думал, что все прокси упали, а нет, выяснили с менеджером, что проблема со стороны провайдера.</p>
+                    <p class="text">Спасибо вам ребята!!!!!!!!!!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="feedback__message feedback__second_message">
+                  <div class="feedback__header">
+                    <img src="img/feedback/avatar.png" alt="Аватар" width="69" height="69" class="feedback__avatar">
+                    <div>
+                      <p class="feedback__name">????? ?????</p>
+                      <p class="feedback__date">?????????</p>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">Была уверена, что ничего лучше прежнего сервиса не найду. Но попробовала этот и осталась довольна. Мне нравится отношение, а цены везде примерно одинаковые.</p>
+                    <p class="text">А там думайте сами конечно )</p>
+                  </div>
+                </div>
+                <div class="feedback__message feedback__third_message">
+                  <div class="feedback__header">
+                    <img src="img/feedback/avatar.png" alt="Аватар" width="69" height="69" class="feedback__avatar">
+                    <div>
+                      <p class="feedback__name">Timberlake</p>
+                      <p class="feedback__date">01.07.2019</p>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <p class="text">Пользуюсь прокси от этого сервиса только первый месяц, полёт нормальный. Кабинет нравится, удобно. Ну и дизайн приятный, глазу приятно =)</p>
+                    <p class="text">Реферальная система заработка радует, можно экономить.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <a href="" class="submit submit_shadow">Написать отзыв</a>
+    </section>
+    <section class="partner">
+      <div class="wrapper partner__bg">
+        <div class="content">
+          <h2 class="title">Партнёрская программа</h2>
+          <p class="text">Наша уникальная партнерская программа позволяет заработать до 20% от всех платежей привлеченных Вами клиентами. Новых клиентов можно привлечь двуми способами: реферальная ссылка или скидочный купон на первую покупку.</p>
+          <p class="text">Реферальная ссылка. После перехода по ссылке, клиент должен зарегистрироваться в системе или произвести оплату прокси. Купон на скидку. Клиент должен осуществить свою первую покупку на нашем сайте с применением вашего купона. В таком случае, клиент пожизненно закрепляется за вами и все последующие его покупки будут приносить отчисления на ваш аккаунт.</p>
+          <p class="text">Партнерское вознаграждение можно выводить на электронные кошельки: WebMoney и Яндекс.Деньги, либо иоплачивать любые услуги нашего сайта.</p>
+          <a href="" class="submit submit_shadow">Стать партнёром</a>
+        </div>
+      </div>
+      <div class="wrapper">
+        <img src="img/service.png" alt="Сервисы" width="1130" height="30">
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="wrapper">
+        <ul class="contacts__list">
+          <li class="contacts__list_item">
+            <h2 class="title">Наши контакты</h2>
+            <p class="text">мы всегда на связи</p>
+          </li>
+          <li class="contacts__list_item">
+            <span class="contacts__icon"></span>
+            <a href="mailto:team@proxy.tube" class="text">team@proxy.tube</a>
+          </li>
+          <li class="contacts__list_item">
+            <span class="contacts__icon"></span>
+            <a href="vk.com/proxy.tube" class="text">@proxy.tube</a>
+          </li>
+          <li class="contacts__list_item">
+            <span class="contacts__icon"></span>
+            <a href="facebook.com/proxytube" class="text">@proxytube</a>
+          </li>
+          <li class="contacts__list_item">
+            <span class="contacts__icon"></span>
+            <a href="telegram.com/proxytube" class="text">@proxytube</a>
+          </li>
+        </ul>
+      </div>
     </section>
   </main>
-  <footer></footer>
+  <footer class="footer">
+    <div class="wrapper">
+      <a href="index.html" class="logo">
+        <span class="logo__icon"></span>
+        <span class="logo__text">
+          <span>Proxy</span>
+          <span>Tube</span>
+        </span>
+      </a>
+      <p class="footer__container">
+        <span class="text">© Proxy.Tube 2019</span>
+        <span class="text">Все права защищены</span>
+      </p>
+      <p class="footer__container">
+        <a href="" class="text">Политика конфиденциальности</a>
+        <a href="" class="text">Пользовательское соглашение</a>
+      </p>
+      <p class="footer__container">
+        <span class="text">Техническая поддержка:</span>
+        <a href="mailto:support@proxy.tube" class="text">support@proxy.tube</a>
+      </p>
+    </div>
+  </footer>
 
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/jquery.nicescroll.min.js"></script>

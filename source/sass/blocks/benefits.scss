@@ -1,29 +1,60 @@
 .benefits {
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  // margin-top: -50px;
+  margin-top: -345px;
+
+  .title {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .benefits {
+    margin-top: -426px;
+  }
 }
 
 .benefits__listing {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 100%;
   min-height: 230px;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 110px;
+  padding: 63px 80px 50px 58px;
   list-style: none;
   background: #FFFFFF;
   box-shadow: 0px 10px 30px rgba(49, 87, 152, 0.1);
   border-radius: 20px;
 }
 
+@media (max-width: $tablet) {
+  .benefits__listing {
+    padding: 70px 100px 80px 90px;
+    margin-bottom: 67px;
+  }
+}
+
 .benefits__listing_item {
   display: flex;
   flex-direction: column;
 
+  &:not(:last-child) {
+    width: 220px;
+  }
+
+  .benefits__listing_icon {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 5px;
+  }
+
   &:nth-child(1) {
     .benefits__listing_icon {
-      width: 42px;
-      height: 42px;
       background-image: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M22.8809 23.8645C22.2531 23.884 21.6253 23.8948 21.0004 23.8948C20.3733 23.8948 19.7433 23.8847 19.114 23.8645C13.8165 23.7195 9.59488 22.9711 6.55535 21.9038C5.12651 21.4218 3.90333 20.8546 2.95871 20.2058V25.3374V25.6982V26.059V26.9892C5.01249 29.1332 11.9027 31.1105 20.9996 31.1105C30.0966 31.1105 36.9868 29.1332 39.0406 26.9892V26.059V25.6982V25.3374V20.2058C38.0894 20.8589 36.8554 21.4304 35.4143 21.9139C32.3762 22.9762 28.1633 23.7202 22.8809 23.8645Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M2.95871 10.7444V15.8759V16.2368V16.5976V17.5278C4.86239 19.5152 10.9205 21.3597 19.0411 21.618C19.1241 21.6209 19.2093 21.6216 19.293 21.6238C19.5282 21.6303 19.7628 21.6368 20.0016 21.6404C20.3314 21.6462 20.6641 21.649 20.9996 21.649C21.3352 21.649 21.6679 21.6462 21.9977 21.6411C22.2358 21.6375 22.4711 21.631 22.7063 21.6245C22.79 21.6223 22.8752 21.6209 22.9582 21.6187C31.0787 21.3597 37.1369 19.5152 39.0406 17.5285V16.5976V16.2368V15.8759V10.7444C35.5284 13.1568 28.1034 14.4327 20.9996 14.4327C13.8958 14.4327 6.47164 13.1568 2.95871 10.7444Z' fill='url(%23paint1_linear)'/%3E%3Cpath d='M38.9431 6.16422C38.1335 3.06046 31.9072 0 20.9996 0C10.1195 0 3.89972 3.04531 3.06479 6.14113C3.00345 6.24721 2.95871 6.3634 2.95871 6.49473V6.85555V8.15883C5.00599 10.2956 11.8471 12.2678 20.9996 12.2678C30.1522 12.2678 36.994 10.2956 39.0406 8.15883V6.85555V6.49473C39.0406 6.3735 39.0002 6.26453 38.9431 6.16422Z' fill='url(%23paint2_linear)'/%3E%3Cpath d='M2.95871 29.5872V35.5053C2.95871 35.6222 2.98974 35.7326 3.04314 35.8308C3.89539 39.3632 11.5202 42 20.9996 42C30.4574 42 38.07 39.374 38.9504 35.8546C39.0081 35.7507 39.0406 35.6316 39.0406 35.5053V29.5886C36.0566 31.6893 29.9082 33.3404 20.9996 33.3404C12.0903 33.3404 5.94196 31.6878 2.95871 29.5872Z' fill='url(%23paint3_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='2.95871' y1='26.0671' x2='38.6397' y2='26.0671' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='2.95871' y1='16.6056' x2='38.6397' y2='16.6056' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear' x1='2.95871' y1='6.59395' x2='38.6397' y2='6.59395' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint3_linear' x1='2.95871' y1='36.2591' x2='38.6397' y2='36.2591' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
       background-repeat: no-repeat;
       background-position: center;
@@ -32,8 +63,6 @@
 
   &:nth-child(2) {
     .benefits__listing_icon {
-      width: 42px;
-      height: 42px;
       background-image: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 42 42' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M33.4905 5.16893C30.1574 1.83577 25.7254 0 21.0115 0C16.2973 0 11.8657 1.83577 8.53221 5.16893C5.19905 8.50241 3.36328 12.9343 3.36328 17.6483C3.36328 21.7703 4.81549 25.7818 7.45235 28.9439V28.9442C8.12334 29.7485 8.86995 30.4974 9.67232 31.1709L20.1403 41.6392C20.3809 41.8798 20.6962 42 21.0115 42C21.3268 42 21.6422 41.8798 21.8825 41.6392L32.3508 31.1709C33.1531 30.4974 33.8997 29.7485 34.5704 28.9439C37.2076 25.7818 38.6598 21.7703 38.6598 17.6483C38.6598 12.9343 36.824 8.50241 33.4905 5.16893ZM18.0802 14.8387V22.4666C18.0802 23.1472 17.5284 23.6987 16.8481 23.6987C16.1678 23.6987 15.6161 23.1472 15.6161 22.4666V14.8387C15.6161 14.1584 16.1678 13.6069 16.8481 13.6069C17.5284 13.6069 18.0802 14.1584 18.0802 14.8387ZM19.2607 22.4666V14.8387C19.2607 14.1584 19.8125 13.6069 20.4928 13.6069H24.8683C26.5993 13.6069 28.0073 15.0149 28.0073 16.7459C28.0073 18.4766 26.5993 19.8849 24.8683 19.8849H21.7248V22.4669C21.7248 23.1472 21.173 23.6987 20.4928 23.6987C19.8125 23.6987 19.2607 23.1472 19.2607 22.4666Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M25.5434 16.746C25.5434 16.3736 25.2406 16.0708 24.8683 16.0708H21.7248V17.4208H24.8683C25.2406 17.4208 25.5434 17.118 25.5434 16.746Z' fill='url(%23paint1_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='3.36328' y1='22.575' x2='38.2676' y2='22.575' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='21.7248' y1='16.7964' x2='25.501' y2='16.7964' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
       background-repeat: no-repeat;
       background-position: center;
@@ -42,8 +71,6 @@
 
   &:nth-child(3) {
     .benefits__listing_icon {
-      width: 38px;
-      height: 38px;
       background-image: url("data:image/svg+xml,%3Csvg width='38' height='38' viewBox='0 0 38 38' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M33.7777 0H4.22226C1.88941 0 0 1.88941 0 4.22226V33.7778C0 36.1106 1.88941 38 4.22226 38H33.7778C36.1106 38 38 36.1106 38 33.7777V4.22226C38 1.88941 36.1106 0 33.7777 0ZM23.2223 26.5556H19V15.6667H14.7777V11.4444H23.2222L23.2223 26.5556Z' fill='url(%23paint0_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='0' y1='20.425' x2='37.5778' y2='20.425' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
@@ -52,9 +79,7 @@
 
   &:nth-child(4) {
     .benefits__listing_icon {
-      width: 44px;
-      height: 44px;
-      background-image: url("data:image/svg+xml,%3Csvg width='44' height='44' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M30.6464 15.9626L30.5127 12.9004C30.4509 11.4697 29.3178 10.3409 27.91 10.2439L29.4011 5.62072C30.3386 5.39716 31.1424 4.71335 31.4602 3.72923C31.9448 2.23013 31.1223 0.622479 29.624 0.13865C28.1214 -0.345179 26.5138 0.478061 26.0305 1.97772C25.7127 2.96285 25.9673 3.98737 26.5971 4.7164L24.8197 10.2252H19.18L17.4027 4.7164C18.0325 3.98737 18.2869 2.96285 17.9692 1.97772C17.4861 0.478061 15.8785 -0.345272 14.3758 0.13865C12.8774 0.622479 12.0549 2.23013 12.5395 3.72923C12.8572 4.71344 13.6611 5.39725 14.5987 5.62072L16.0898 10.2439C14.682 10.3409 13.5489 11.4697 13.4871 12.9004L13.3534 15.9626C8.109 16.2911 3.95341 20.6367 3.95341 25.9636V36.3255C3.95341 37.8698 5.20594 39.1224 6.75025 39.1224H12.3438L12.1311 43.9999H31.8685L31.6556 39.1224H37.2493C38.7937 39.1224 40.0462 37.8698 40.0462 36.3255V25.9636C40.0464 20.6367 35.8906 16.2911 30.6464 15.9626ZM11.421 27.6524V24.0115C11.421 23.3184 11.9832 22.7569 12.6763 22.7569H16.3158C17.0089 22.7569 17.5711 23.3184 17.5711 24.0115V27.6524C17.5711 28.3456 17.0089 28.907 16.3158 28.907H12.6763C11.9832 28.9071 11.421 28.3456 11.421 27.6524ZM27.9933 34.4547C26.7323 36.442 24.5279 37.7642 22 37.7642C19.472 37.7642 17.2677 36.442 16.0066 34.4547C15.7607 34.0686 15.7464 33.5791 15.9679 33.1786C16.1878 32.7773 16.6092 32.5286 17.0664 32.5286H26.9337C27.3911 32.5286 27.8123 32.7765 28.0338 33.1778C28.2551 33.5791 28.2392 34.0687 27.9933 34.4547ZM32.5805 27.6524C32.5805 28.3456 32.0182 28.907 31.3251 28.907H27.6857C26.9927 28.907 26.4304 28.3455 26.4304 27.6524V24.0115C26.4304 23.3184 26.9927 22.7569 27.6857 22.7569H31.3251C32.0182 22.7569 32.5805 23.3184 32.5805 24.0115V27.6524Z' fill='url(%23paint0_linear)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='3.95341' y1='23.65' x2='39.6452' y2='23.65' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3CclipPath id='clip0'%3E%3Crect width='44' height='44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg width='42' height='42' viewBox='0 0 44 44' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath d='M30.6464 15.9626L30.5127 12.9004C30.4509 11.4697 29.3178 10.3409 27.91 10.2439L29.4011 5.62072C30.3386 5.39716 31.1424 4.71335 31.4602 3.72923C31.9448 2.23013 31.1223 0.622479 29.624 0.13865C28.1214 -0.345179 26.5138 0.478061 26.0305 1.97772C25.7127 2.96285 25.9673 3.98737 26.5971 4.7164L24.8197 10.2252H19.18L17.4027 4.7164C18.0325 3.98737 18.2869 2.96285 17.9692 1.97772C17.4861 0.478061 15.8785 -0.345272 14.3758 0.13865C12.8774 0.622479 12.0549 2.23013 12.5395 3.72923C12.8572 4.71344 13.6611 5.39725 14.5987 5.62072L16.0898 10.2439C14.682 10.3409 13.5489 11.4697 13.4871 12.9004L13.3534 15.9626C8.109 16.2911 3.95341 20.6367 3.95341 25.9636V36.3255C3.95341 37.8698 5.20594 39.1224 6.75025 39.1224H12.3438L12.1311 43.9999H31.8685L31.6556 39.1224H37.2493C38.7937 39.1224 40.0462 37.8698 40.0462 36.3255V25.9636C40.0464 20.6367 35.8906 16.2911 30.6464 15.9626ZM11.421 27.6524V24.0115C11.421 23.3184 11.9832 22.7569 12.6763 22.7569H16.3158C17.0089 22.7569 17.5711 23.3184 17.5711 24.0115V27.6524C17.5711 28.3456 17.0089 28.907 16.3158 28.907H12.6763C11.9832 28.9071 11.421 28.3456 11.421 27.6524ZM27.9933 34.4547C26.7323 36.442 24.5279 37.7642 22 37.7642C19.472 37.7642 17.2677 36.442 16.0066 34.4547C15.7607 34.0686 15.7464 33.5791 15.9679 33.1786C16.1878 32.7773 16.6092 32.5286 17.0664 32.5286H26.9337C27.3911 32.5286 27.8123 32.7765 28.0338 33.1778C28.2551 33.5791 28.2392 34.0687 27.9933 34.4547ZM32.5805 27.6524C32.5805 28.3456 32.0182 28.907 31.3251 28.907H27.6857C26.9927 28.907 26.4304 28.3455 26.4304 27.6524V24.0115C26.4304 23.3184 26.9927 22.7569 27.6857 22.7569H31.3251C32.0182 22.7569 32.5805 23.3184 32.5805 24.0115V27.6524Z' fill='url(%23paint0_linear)'/%3E%3C/g%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='3.95341' y1='23.65' x2='39.6452' y2='23.65' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3CclipPath id='clip0'%3E%3Crect width='44' height='44' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -62,56 +87,289 @@
 
   &:nth-child(5) {
     .benefits__listing_icon {
-      width: 40px;
-      height: 40px;
       background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.0367 16.4194C27.684 16.4194 28.2104 15.8927 28.2104 15.2457C28.2104 14.5984 27.684 14.072 27.0367 14.072C26.3898 14.072 25.863 14.5984 25.863 15.2457C25.863 15.8927 26.3898 16.4194 27.0367 16.4194Z' fill='url(%23paint0_linear)'/%3E%3Cpath d='M12.9633 19.5469C13.6102 19.5469 14.137 19.0204 14.137 18.3732C14.137 17.7259 13.6102 17.1995 12.9633 17.1995C12.316 17.1995 11.7896 17.7259 11.7896 18.3732C11.7896 19.0204 12.316 19.5469 12.9633 19.5469Z' fill='url(%23paint1_linear)'/%3E%3Cpath d='M20 9.38232C20.6473 9.38232 21.1737 8.8559 21.1737 8.20862C21.1737 7.56165 20.6473 7.03491 20 7.03491C19.3527 7.03491 18.8263 7.56134 18.8263 8.20862C18.8263 8.8559 19.3527 9.38232 20 9.38232Z' fill='url(%23paint2_linear)'/%3E%3Cpath d='M40 20C40 14.6579 37.9196 9.63531 34.1422 5.85785C30.3647 2.08038 25.3421 0 20 0C14.6579 0 9.63531 2.08038 5.85785 5.85785C2.08038 9.63531 0 14.6579 0 20C0 25.3421 2.08038 30.3647 5.85785 34.1422C9.3576 37.6422 13.9267 39.6838 18.8281 39.9652V31.4563L11.7914 25.9833V21.6891C10.4263 21.2054 9.4458 19.9017 9.4458 18.3731C9.4458 16.4337 11.0236 14.8557 12.9633 14.8557C14.9026 14.8557 16.4807 16.4337 16.4807 18.3731C16.4807 19.9017 15.4999 21.2054 14.1351 21.6891V24.8367L18.8281 28.4869V11.5247C17.4631 11.041 16.4825 9.73755 16.4825 8.20862C16.4825 6.26923 18.0606 4.69116 20 4.69116C21.9394 4.69116 23.5175 6.26923 23.5175 8.20862C23.5175 9.73755 22.5369 11.0406 21.1719 11.5247V25.3595L25.8649 21.7093V18.5617C24.5001 18.0777 23.5193 16.7743 23.5193 15.2457C23.5193 13.306 25.0974 11.7282 27.0367 11.7282C28.9764 11.7282 30.5542 13.306 30.5542 15.2457C30.5542 16.7743 29.5737 18.0777 28.2086 18.5617V22.8555L21.1719 28.3289V39.9652C26.0733 39.6838 30.6421 37.6419 34.1422 34.1422C37.9196 30.3647 40 25.3421 40 20Z' fill='url(%23paint3_linear)'/%3E%3Cdefs%3E%3ClinearGradient id='paint0_linear' x1='25.863' y1='15.3338' x2='28.1844' y2='15.3338' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint1_linear' x1='11.7896' y1='18.4612' x2='14.1109' y2='18.4612' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint2_linear' x1='18.8263' y1='8.29665' x2='21.1476' y2='8.29665' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3ClinearGradient id='paint3_linear' x1='0' y1='21.4813' x2='39.5556' y2='21.4813' gradientUnits='userSpaceOnUse'%3E%3Cstop stop-color='%23FF973D'/%3E%3Cstop offset='1' stop-color='%23FF5C5C'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E%0A");
       background-repeat: no-repeat;
       background-position: center;
     }
   }
+
+  .row {
+    display: flex;
+    align-items: flex-start;
+    min-height: 45px;
+  }
+
+  .text {
+    width: 130px;
+    line-height: 140%;
+    margin-top: 20px;
+    margin-left: 17px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .benefits__listing_item {
+
+    &:nth-child(1) {
+      margin-bottom: 63px;
+    }
+
+    &:nth-child(3) {
+      width: 90px;
+
+      .benefits__listing_line {
+        display: none;
+      }
+    }
+
+    &:last-child {
+      margin-right: 160px;
+    }
+  }
+}
+
+.benefits__listing_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.benefits__listing_shadow {
+  display: flex;
+  width: 70px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #FF973D 0%, #FF5C5C 98.89%);
+  opacity: 0.3;
+  filter: blur(10px);
 }
 
 .benefits__listing_line {
   width: 70px;
   height: 1px;
   background-color: #EFF2F6;
+  margin-top: 20px;
 }
 
 .benefits__buy {
+  position: relative;
   display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
   width: 100%;
   min-height: 700px;
+  margin-bottom: 33px;
+
+  &_subtitle {
+    margin-bottom: 52px;
+  }
+
+  .submit {
+    width: 290px;
+    margin-bottom: 26px;
+  }
+
+  .submit_shadow {
+
+    &::after {
+      width: 272px;
+      left: 9px;
+      top: 9px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .benefits__buy {
+    align-items: flex-end;
+    justify-content: center;
+    min-height: 787px;
+  }
+}
+
+.benefits__buy_form {
+  display: flex;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 355px;
+  min-height: 480px;
+  box-sizing: border-box;
+  padding: 36px 32px 15px 34px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 30px rgba(49, 87, 152, 0.1);
+  border-radius: 20px;
+  margin-top: 3px;
+
+  label {
+    margin-bottom: 20px;
+  }
+
+  .select_unit,
+  .select_unit .select2-container,
+  .select_unit .select2-selection__rendered {
+    width: 135px !important;
+  }
+
+  .first_select_unit,
+  .first_select_unit .select2-container,
+  .first_select_unit .select2-selection__rendered {
+    width: 290px !important;
+  }
+}
+
+@media (max-width: $tablet) {
+  .benefits__buy_form {
+    width: 100%;
+    min-height: 330px;
+
+    .select_unit,
+    .select_unit .select2-container,
+    .select_unit .select2-selection__rendered {
+      width: 205px !important;
+    }
+
+    .first_select_unit,
+    .first_select_unit .select2-container,
+    .first_select_unit .select2-selection__rendered {
+      width: 430px !important;
+    }
+  }
+}
+
+.benefits__buy_bg {
+  position: absolute;
+  top: 0;
+  left: -125px;
+  z-index: -1;
+  display: flex;
+  width: 1390px;
+  height: 700px;
   background-image: url(../img/bg_benefits_desktop.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
 
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    width: 355px;
-    min-height: 480px;
-    box-sizing: border-box;
-    padding: 36px 32px 35px 34px;
-    background: #FFFFFF;
-    box-shadow: 0px 10px 30px rgba(49, 87, 152, 0.1);
-    border-radius: 20px;
+@media (max-width: $tablet) {
+  .benefits__buy_bg {
+    top: -90px;
+    left: -25px;
+    width: 770px;
+    background-image: url(../img/bg_benefits_tablet.png);
+    background-size: none;
   }
 }
 
 .benefits__warranty {
+  position: relative;
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 126px;
 
-  .content {
+  &::before {
+    content: '100%';
+    position: absolute;
+    top: -28px;
+    left: -180px;
+    z-index: -1;
+    font-size: 312px;
+    font-weight: bold;
+    color: #EFF2F6;
+    opacity: 0.2;
+  }
+
+  .icon {
     display: flex;
     flex-direction: column;
-    width: 670px;
+    margin-top: 50px;
+
+    p {
+      margin: 0;
+
+      &:first-child {
+        font-size: 130px;
+        line-height: 110%;
+        font-weight: bold;
+        background: linear-gradient(90deg, #FF973D 0%, #FF5C5C 98.89%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: 0px 15px 15px rgba(255, 97, 99, 0.25);
+      }
+
+      &:last-child {
+        font-size: 26px;
+        line-height: 122%;
+        background: linear-gradient(90deg, #FF973D 0%, #FF5C5C 98.89%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 640px;
     min-height: 305px;
     box-sizing: border-box;
-    padding: 40px 50px 45px 90px;
-    background: #FFFFFF;
+    padding: 40px 50px 45px 63px;
+    background-color: #FFFFFF;
     box-shadow: 0px 10px 30px rgba(49, 87, 152, 0.1);
-    border-radius: 20px
+    border-radius: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 120px;
+      left: -20px;
+      width: 50px;
+      height: 50px;
+      transform: rotate(45deg);
+      background-color: #FFFFFF;
+      box-shadow: -12px 10px 10px rgba(49, 87, 152, 0.03);
+    }
+  }
+
+  .text {
+    line-height: 160%;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .benefits__warranty {
+    flex-direction: column;
+    margin-bottom: 79px;
+
+    &:before {
+      top: -35px;
+      left: -93px;
+    }
+
+    .icon {
+      align-items: center;
+      margin-top: 40px;
+      margin-bottom: 56px;
+    }
+
+    .content {
+      width: 100%;
+      min-height: 285px;
+      padding: 28px 45px 30px 32px;
+
+      &::after {
+        top: -25px;
+        left: 335px;
+        box-shadow: -12px 10px 10px rgba(49, 87, 152, 0.03);
+      }
+    }
   }
 }
 
@@ -121,5 +379,232 @@
 
   .row {
     display: flex;
+
+    &:first-child {
+      margin-bottom: 83px;
+    }
+  }
+
+  .submit {
+    min-width: 290px;
+    margin-top: 11px;
+    margin-left: 85px;
+
+    &::after {
+      width: 272px;
+      left: 9px;
+      top: 9px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .benefits__usability {
+
+    .row {
+
+      &:first-child {
+        margin-bottom: 50px;
+      }
+    }
+    .submit {
+      min-width: 250px;
+      margin-top: 8px;
+      margin-left: 57px;
+    }
+
+    &::after {
+      width: 235px;
+      left: 8px;
+      top: 8px;
+    }
+  }
+}
+
+.benefits__usability_list {
+  display: flex;
+  flex-direction: column;
+  width: 433px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .subtitle {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 122%;
+    color: #30394F;
+  }
+
+  .text {
+    width: 390px;
+    line-height: 140%;
+  }
+}
+
+@media (max-width: $tablet) {
+  .benefits__usability_list {
+    width: 309px;
+
+    .text {
+      width: 300px;
+    }
+  }
+}
+
+.benefits__usability_item {
+  opacity: 0.5;
+  margin-bottom: 40px;
+  cursor: pointer;
+
+  &.active {
+    position: relative;
+    opacity: 1;
+    border-right: 3px solid #FF5C5C;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: calc(50% - 5px);
+      right: -12px;
+      border: 5px solid transparent;
+      border-left: 5px solid #FF5C5C;
+
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .benefits__usability_item {
+    margin-bottom: 30px;
+  }
+}
+
+.benefits__usability_img {
+  width: 845px;
+  height: 480px;
+  margin-top: -21px;
+  margin-left: -35px;
+  background-repeat: no-repeat;
+  background-position: top left;
+
+  &_first {
+    background-image: url("../img/benefits__usability_list_ management.png");
+  }
+
+  &_second {
+    background-image: url("../img/benefits__usability_list_ management.png");
+    opacity: 0.5;
+  }
+
+  &_third {
+    background-image: url("../img/benefits__usability_list_ management.png");
+    opacity: 0.1;
+  }
+}
+
+@media (max-width: $tablet) {
+  .benefits__usability_img {
+    margin-top: -13px;
+    margin-left: -13px;
+  }
+}
+
+.benefits__buy_input {
+  display: flex;
+  width: 135px;
+  height: 55px;
+        -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -moz-appearance:textfield;
+  box-sizing: border-box;
+  padding: 19px 23px;
+  background: #F5F8FC;
+  border-radius: 10px;
+  border: none;
+  box-shadow: none;
+  font-size: 13px;
+  line-height: 16px;
+  color: rgba(48, 57, 79, 0.5);
+  margin-bottom: 23px;
+
+  &::placeholder {
+    opacity: 1;
+  }
+
+  &::-webkit-outer-spin-button{
+        -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+}
+
+@media (max-width: $tablet) {
+  .benefits__buy_input {
+    width: 205px;
+  }
+}
+
+.benefits__price {
+  display: flex;
+  flex-direction: column;
+
+  span:first-child {
+    font-size: 20px;
+    line-height: 140%;
+    color: #30394F;
+  }
+
+  span:last-child {
+    font-size: 11px;
+    line-height: 140%;
+    color: #30394F;
+    opacity: 0.7;
+  }
+}
+
+.benefits__discount {
+  width: 105px;
+  margin: 5px 30px 0 0;
+  font-size: 12px;
+  line-height: 17px;
+  color: #30394F;
+  opacity: 0.7;
+  margin-bottom: 32px;
+}
+
+@media (max-width: $tablet) {
+  .benefits__discount {
+    width: 205px;
+    padding-top: 3px;
+    margin: 10px 0px 0 0;
+  }
+}
+
+.benefits__consent {
+  width: 220px;
+  font-size: 11px;
+  line-height: 140%;
+  color: rgba(48, 57, 79, 0.7);
+
+  a {
+    color: rgba(48, 57, 79, 0.7);
+  }
+}
+
+@media (max-width: $tablet) {
+  .benefits__consent {
+    width: 370px;
+    padding-top: 3px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }

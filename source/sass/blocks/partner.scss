@@ -1,0 +1,65 @@
+.partner {
+  margin-bottom: 50px;
+  border-bottom: 2px solid #F5F8FC;
+  padding-bottom: 126px;
+  margin-bottom: 123px;
+
+  .wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .partner__bg {
+    background-image: url(../img/bg_partner_desktop.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: contain;
+    margin-bottom: 129px;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 652px;
+    min-height: 465px;
+  }
+
+  .title {
+    margin-top: 36px;
+    margin-bottom: 44px;
+  }
+
+  .text {
+    line-height: 140%;
+  }
+
+  .text:not(:last-of-type) {
+    margin-bottom: 22px;
+  }
+
+  .text:last-of-type {
+    margin-bottom: 50px;
+  }
+
+  .submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 290px;
+    text-decoration: none;
+  }
+
+  .submit_shadow {
+
+    &::after {
+      width: 272px;
+      left: 9px;
+      top: 9px;
+    }
+  }
+}
+
+.partner__service {
+  background-image: none;
+}

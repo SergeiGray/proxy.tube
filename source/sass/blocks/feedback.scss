@@ -1,0 +1,180 @@
+.feedback {
+  position: relative;
+  width: 1180px;
+  margin: -200px auto 73px;
+
+
+  .title {
+    color: #ffffff;
+    margin-left: 20px;
+    margin-bottom: 45px;
+  }
+
+  .text {
+    line-height: 140%;
+  }
+
+  .submit {
+    position: absolute;
+    top: 539px;
+    left: 54px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 290px;
+    text-decoration: none;
+  }
+
+  .submit_shadow {
+
+    &::after {
+      width: 272px;
+      left: 9px;
+      top: 9px;
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .feedback {
+    margin-top: -237px;
+  }
+}
+
+.feedback__slider {
+  position: relative;
+
+  .flex-direction-nav a {
+    top: 339px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 44px;
+    height: 44px;
+    opacity: 1;
+    border: none;
+
+    &.flex-next {
+      right: 20px;
+
+      &::before {
+        content: '';
+        width: 42px;
+        height: 42px;
+        background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.15301 12.1025C-0.0510031 12.3078 -0.0510032 12.6407 0.15301 12.846C0.357022 13.0513 0.687793 13.0513 0.891806 12.846L6.81916 6.88047C7.02317 6.67515 7.02317 6.34225 6.81916 6.13692C6.81667 6.13441 6.81417 6.13194 6.81164 6.1295L0.938412 0.218439C0.734399 0.0131122 0.403629 0.0131121 0.199616 0.218438C-0.00439669 0.423765 -0.00439703 0.756665 0.199616 0.961992L5.71089 6.50877L0.15301 12.1025Z' fill='%2330394F'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: 1px solid rgba(196, 196, 196, 0.2);
+        border-radius: 50%;
+      }
+
+      &:hover::before {
+        border: 1px solid rgba(196, 196, 196, 0.7);
+      }
+    }
+
+    &.flex-prev {
+      left: 1055px;
+
+
+      &::before {
+        content: '';
+        width: 42px;
+        height: 42px;
+        background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.84699 0.897549C7.051 0.692222 7.051 0.359322 6.84699 0.153995C6.64298 -0.0513319 6.31221 -0.0513316 6.10819 0.153995L0.180839 6.11953C-0.0231736 6.32485 -0.0231736 6.65775 0.180839 6.86308C0.183332 6.86559 0.185843 6.86807 0.188373 6.87052L6.06159 12.7816C6.2656 12.9869 6.59637 12.9869 6.80038 12.7816C7.0044 12.5762 7.0044 12.2433 6.80039 12.038L1.28911 6.49123L6.84699 0.897549Z' fill='%2330394F'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: 1px solid rgba(196, 196, 196, 0.2);
+        border-radius: 50%;
+      }
+
+      &:hover::before {
+        border: 1px solid rgba(196, 196, 196, 0.7);
+      }
+    }
+  }
+}
+
+.feedback__slider_container {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  .col {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      margin-left: 20px;
+      margin-right: 30px;
+    }
+  }
+
+  .text:not(:last-of-type) {
+    margin-bottom: 23px;
+  }
+}
+
+.feedback__desktop {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.feedback__slider_item {
+  margin-right: 40px;
+}
+
+.feedback__message {
+  box-sizing: border-box;
+  padding: 40px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 30px rgba(49, 87, 152, 0.1);
+  border-radius: 20px;
+
+  &.feedback__message_first {
+    width: 360px;
+    padding-left: 46px;
+    padding-right: 48px;
+  }
+
+  &.feedback__second_message {
+    width: 750px;
+    margin-bottom: 30px;
+    padding-bottom: 36px;
+    background-image: url("data:image/svg+xml,%3Csvg width='172' height='110' viewBox='0 0 172 110' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.5' fill-rule='evenodd' clip-rule='evenodd' d='M0.0187023 0C0.00628039 0.266003 0 0.533586 0 0.802608V61.4068C0 70.7808 7.62533 78.4033 16.9993 78.4033H34.4V107.07C34.4 108.254 35.1281 109.317 36.2347 109.745C36.5701 109.874 36.9198 109.937 37.2667 109.937C38.0579 109.937 38.8347 109.607 39.388 108.999L67.2061 78.3975L114.867 78.2026C124.241 78.2026 131.867 70.5773 131.867 61.2061V60.8822L146.945 77.4687C147.499 78.0765 148.275 78.4061 149.067 78.4061C149.414 78.4061 149.763 78.3431 150.099 78.2141C151.205 77.7869 151.933 76.7234 151.933 75.5395V46.8728H155.001C164.375 46.8728 172 39.2475 172 29.8763V0H166.27V29.8706H166.267C166.267 36.0827 161.213 41.1337 155.001 41.1337H149.067C147.481 41.1337 146.2 42.418 146.2 44.0004V68.1205L131.867 52.3539V0.599075C131.867 0.398564 131.863 0.198853 131.856 0H126.118C126.128 0.197449 126.133 0.396228 126.133 0.596207V53.4604V61.2033C126.133 67.4153 121.079 72.4664 114.856 72.4664L65.9219 72.6671C65.1192 72.6699 64.3509 73.0111 63.812 73.6045L40.1333 99.6539V75.5337C40.1333 73.9513 38.8519 72.6671 37.2667 72.6671H16.9993C10.7873 72.6671 5.73333 67.6131 5.73333 61.4039V0.799744C5.73333 0.530888 5.7428 0.264201 5.76142 0H0.0187023ZM28.6667 17.9997H65.9333C67.5186 17.9997 68.8 16.7155 68.8 15.1331C68.8 13.5507 67.5186 12.2664 65.9333 12.2664H28.6667C27.0814 12.2664 25.8 13.5507 25.8 15.1331C25.8 16.7155 27.0814 17.9997 28.6667 17.9997ZM28.6667 29.4664C27.0814 29.4664 25.8 30.7507 25.8 32.3331C25.8 33.9155 27.0814 35.1998 28.6667 35.1998H103.2C104.785 35.1998 106.067 33.9155 106.067 32.3331C106.067 30.7507 104.785 29.4664 103.2 29.4664H28.6667ZM25.8 49.5331C25.8 47.9507 27.0814 46.6664 28.6667 46.6664H103.2C104.785 46.6664 106.067 47.9507 106.067 49.5331C106.067 51.1154 104.785 52.3997 103.2 52.3997H28.6667C27.0814 52.3997 25.8 51.1154 25.8 49.5331Z' fill='%23EFF2F6'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+
+  &.feedback__third_message {
+    width: 590px;
+    padding-top: 36px;
+    padding-bottom: 50px;
+  }
+}
+
+.feedback__header {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.feedback__avatar {
+  margin-right: 18px;
+}
+
+.feedback__name {
+  font-size: 16px;
+  line-height: 140%;
+  color: #30394F;
+  margin-top: 13px;
+  margin-bottom: 3px;
+}
+
+.feedback__date {
+  font-size: 12px;
+  line-height: 140%;
+  color: #30394F;
+  opacity: 0.7;
+  margin: 0;
+}

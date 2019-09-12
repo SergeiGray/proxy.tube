@@ -1,17 +1,174 @@
 .landing {
+  overflow-x: hidden;
   display: flex;
   width: 100%;
   min-height: 1035px;
   margin-top: -70px;
   padding-top: 160px;
-  background-image: url(../img/bg_landing_desktop.jpg);
+  background-image: url("../img/bg_landing_desktop.jpg");
   background-repeat: no-repeat;
   background-position: top center;
 
   .wrapper {
+    position: relative;
     display: flex;
-    background-image: url(../img/bg_landing-wrapper_desktop.png);
-    background-repeat: no-repeat;
-    background-position: top right;
+    flex-direction: column;
+  }
+
+  .title {
+    width: 580px;
+    margin-top: 0;
+    margin-bottom: 65px;
+    font-size: 46px;
+    line-height: 122%;
+    color: #FFFFFF;
+  }
+
+  .subtitle {
+    margin-top: 0;
+    margin-bottom: 26px;
+    font-size: 15px;
+    line-height: 150%;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .input {
+    min-width: 340px;
+    margin-right: 17px;
+  }
+}
+
+@media (max-width: $tablet) {
+  .landing {
+    padding-top: 180px;
+
+    .title {
+      font-size: 40px;
+      margin-bottom: 38px;
+    }
+  }
+}
+
+.landing__bg {
+  position: absolute;
+  top: -29px;
+  right: -156px;
+  display: flex;
+  width: 790px;
+  height: 625px;
+  background-image: url("../img/bg_landing-wrapper_desktop.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+@media (max-width: $tablet) {
+  .landing__bg {
+    right: -470px;
+  }
+}
+
+.landing__form {
+  position: relative;
+  z-index: 1;
+}
+
+.landing__slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 520px;
+  margin-bottom: 104px;
+
+  .flex-direction-nav a {
+    top: 154px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 44px;
+    height: 44px;
+    opacity: 1;
+    border: none;
+
+    &.flex-next {
+      right: 0;
+      left: 60px;
+
+      &::before {
+        content: '';
+        width: 42px;
+        height: 42px;
+        background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.15301 12.1025C-0.0510031 12.3078 -0.0510032 12.6407 0.15301 12.846C0.357022 13.0513 0.687793 13.0513 0.891806 12.846L6.81916 6.88047C7.02317 6.67515 7.02317 6.34225 6.81916 6.13692C6.81667 6.13441 6.81417 6.13194 6.81164 6.1295L0.938412 0.218439C0.734399 0.0131122 0.403629 0.0131121 0.199616 0.218438C-0.00439669 0.423765 -0.00439703 0.756665 0.199616 0.961992L5.71089 6.50877L0.15301 12.1025Z' fill='white'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+      }
+
+      &:hover::before {
+        border: 1px solid rgba(255, 255, 255, 0.7);
+      }
+    }
+
+    &.flex-prev {
+      left: 0;
+
+      &::before {
+        content: '';
+        width: 42px;
+        height: 42px;
+        background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.84699 0.897549C7.051 0.692222 7.051 0.359322 6.84699 0.153995C6.64298 -0.0513319 6.31221 -0.0513316 6.10819 0.153995L0.180839 6.11953C-0.0231736 6.32485 -0.0231736 6.65775 0.180839 6.86308C0.183332 6.86559 0.185843 6.86807 0.188373 6.87052L6.06159 12.7816C6.2656 12.9869 6.59637 12.9869 6.80038 12.7816C7.0044 12.5762 7.0044 12.2433 6.80039 12.038L1.28911 6.49123L6.84699 0.897549Z' fill='white'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+      }
+
+      &:hover::before {
+        border: 1px solid rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
+
+.landing__slider_container {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.landing__slider_item {
+  display: flex;
+  margin-right: 20px;
+}
+
+.landing__slider_label {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  height: 110px;
+  box-sizing: border-box;
+  padding: 24px 32px 21px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.08);
+
+  p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.landing__slider_icon {
+  margin-bottom: 9px;
+}
+
+.landing__slider_input {
+  display: none;
+
+  &:checked + .landing__slider_label {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.12);
   }
 }
